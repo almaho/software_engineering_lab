@@ -12,7 +12,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import KMeans
 from sklearn.metrics import adjusted_rand_score
 
-stops = ['در', 'به', 'از', 'این', 'که', 'با','های','می','است', 'را'] 
+stops = ['در', 'به', 'از', 'این','می','است', 'را'] 
 
 
 vectorizer = TfidfVectorizer(stop_words=stops)
