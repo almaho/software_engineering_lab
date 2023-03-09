@@ -18,9 +18,10 @@ stops = ['در', 'به', 'از', 'این', 'که', 'با','های','می','اس�
 vectorizer = TfidfVectorizer(stop_words=stops)
 X = vectorizer.fit_transform(all_strings)
 
-true_k = 10
-model = KMeans(n_clusters=true_k, init='k-means++', max_iter=100, n_init=1)
+true_k = 4
 model.fit(X)
+model = KMeans(n_clusters=true_k, init='k-means++', max_iter=100, n_init=1)
+
 
 print("Top terms per cluster:")
 order_centroids = model.cluster_centers_.argsort()[:, ::-1]
