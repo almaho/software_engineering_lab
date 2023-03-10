@@ -9,3 +9,4 @@ class IsnaSpider(scrapy.Spider):
     def parse(self, response):
         pass
 
+
